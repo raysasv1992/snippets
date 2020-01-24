@@ -1,0 +1,98 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+
+    border: none;
+    cursor: pointer;
+
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.3);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.3);
+  }
+  &--white{
+    color: $color-dark-gray;
+    background-color: $color-white;
+    margin-top: 6rem;
+    border-radius: 10rem;
+    /*position: absolute;
+    top: 160%;
+    left:50%;
+    transform: translate(-50%, -50%);*/
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &--green {
+    color: $color-white;
+    background-color: $color-primary;
+    margin-top: 6rem;
+    border-radius: 10rem;
+
+  }
+  &--animated {
+    animation: buttomAnimated .5s ease-in .45s;
+    animation-fill-mode: backwards;
+  }
+  &::after {
+    content:"";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: .1rem solid $color-primary;
+    padding: .3rem;
+
+    transition: all .1s;
+
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    transform: translateY(-.2rem);
+
+  }
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    transform: translateY(0rem);
+
+  }
+}
+

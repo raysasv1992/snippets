@@ -1,0 +1,236 @@
+.footer {
+  background-image: url("../images/home/footer-img.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: $color-paragraph;
+  /*padding: 10rem 0;*/
+  font-size: 1.4rem;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  padding-bottom: 10px;
+
+  @media only screen and (max-width: 900px) {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__content {
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 2rem;
+    color: $color-dark-gray-2;
+    letter-spacing: .05rem;
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+    grid-gap: 1.2rem;
+    align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      grid-gap: .5rem;
+    }
+  }
+}
+
+
+//bikes--copyright
+.text {
+  &__copyright {
+    font-size: 1.3rem;
+    display: grid;
+    justify-self: flex-end;
+    letter-spacing: .1rem;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 1rem;
+      margin-bottom: 0 !important;
+      display: grid;
+      align-self: center;
+    }
+  }
+  &__contact {
+    font-weight: bold;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+
+
+
+
+//FOOTER PROJECTS
+
+
+.footer__project {
+  //BASIC FOOTER TO REUSE IN ALL PROJECTS
+  &--all {
+    grid-row: footer-project-start / footer-project-end;
+    color: $color-paragraph;
+    padding: 0 5rem;
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-rows: max-content min-content;
+    grid-gap: $gap-btw-btn-footer;
+    align-content: flex-end !important;
+
+    @media only screen and (max-width: 900px) {
+      grid-gap: 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 1rem;
+    }
+    @media only screen and (max-width: 400px) {
+      grid-gap: $gap-btw-btn-footer;
+    }
+  }
+
+
+  //UCLOVERY
+  &--uclovery {
+    grid-row: footer-project-start / footer-project-end;
+    background-image: url("../images/projects/uclovery/uclovery-footer.png");
+    background-size: 100% 100%;
+    color: $color-paragraph;
+    padding: 0 5rem;
+    font-size: 1.4rem;
+    display: grid;
+    align-content: flex-end !important;
+
+    @media only screen and (max-width: 600px) {
+      padding: .5rem;
+    }
+
+    &--content {
+      display: grid;
+      grid-template-rows: min-content min-content;
+      grid-gap: 2rem;
+      align-content: flex-end !important;
+      padding: 0 5rem;
+
+      @media only screen and (max-width: 900px) {
+        padding: 0;
+        grid-gap: .5rem;
+      }
+      @media only screen and (max-width: 700px) {
+        padding: 0 .5rem;
+        grid-gap: 1.5rem;
+      }
+
+    }
+  }
+  &--btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  &--copyright {
+    color: $color-white;
+    letter-spacing: .1rem;
+    font-size: 1.3rem;
+    display: grid;
+    justify-self: flex-end;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 1rem;
+      margin-bottom: 0 !important;
+      display: grid;
+      align-self: center;
+    }
+  }
+  &--contact {
+    color: $color-white;
+    font-weight: bold;
+  }
+
+  //BIKES
+  &--bike {
+    grid-row: footer-project-start / footer-project-end;
+    background-image: url("../images/projects/bikes/footer.png");
+    background-size: 100% 100%;
+    color: $color-paragraph;
+    padding: 0 5rem;
+    font-size: 1.4rem;
+    display: grid;
+    align-content: flex-end !important;
+
+    @media only screen and (max-width: 600px) {
+      padding: .5rem;
+    }
+
+    &--content {
+      display: grid;
+      grid-template-rows: min-content min-content;
+      grid-gap: 2rem;
+      align-content: flex-end !important;
+      padding: 0 5rem;
+
+      @media only screen and (max-width: 900px) {
+        padding: 0;
+        grid-gap: .5rem;
+      }
+      @media only screen and (max-width: 700px) {
+        padding: 0 .5rem;
+        grid-gap: 1.5rem;
+      }
+    }
+  }
+
+  //WEBSTER
+  &--webster {
+    border-top: solid 1px $color-primary;
+  }
+
+  //SWITCH
+  &--switch {
+    border-top: solid 1px $color-switch;
+  }
+}
+
+svg.footer__icon {
+  fill: $color-primary;
+  width: 3rem;
+  height: 3rem;
+  transition: all ease .1s;
+
+  &:hover {
+    transform: scale(1.35);
+    fill: ($color-secondary);
+  }
+
+  &--uclov {
+    fill: $color-white;
+    &:hover {
+      fill: darken($color-white, 25%) ;
+    }
+
+  }
+  &--bike {
+    fill: $color-bike-gray ;
+    &:hover {
+      fill: darken($color-bike-yellow, 22% );
+    }
+  }
+
+  &--challenge {
+    fill: $color-challenges;
+    &:hover {
+      fill: #904ddb;
+    }
+  }
+
+  &--switch {
+    fill: $color-switch;
+    &:hover {
+      fill: darken($color-switch, 5%);
+    }
+  }
+}
+
+.footer__hr {
+  border-top: solid 1px $color-challenges;
+  padding: 0;
+}

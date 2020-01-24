@@ -1,0 +1,249 @@
+.btn {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 100px;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 1.2rem;
+  }
+
+  transition: all .6s;
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    transition: all .2s;
+  }
+
+  &__main {
+    border: solid 1px white;
+    color: #fff;
+    background-image: linear-gradient(to right bottom, rgba(251, 205, 227, 0.85), rgba(255, 132, 174, 0.85));
+  }
+
+  &__visible {
+    padding: 2rem 3.5rem;
+  }
+  &__invisible {
+    position: absolute;
+    padding: 2rem 1.1rem;
+    left: 0;
+    top: 200px;
+    background-image: linear-gradient(to right bottom, rgba(251, 205, 227, 0.85),
+            rgba(255, 132, 174, 0.85), rgba(251, 205, 227, 0.85));
+  }
+  &__arrow {
+    font-size: 5.5rem;
+    color: white;
+    text-align: center;
+    transition: all ease .2s;
+  }
+  &:hover {
+    background-color: transparent ;
+  }
+  &:hover .btn__invisible {
+    top: 0;
+  }
+  &:hover .btn__invisible--project {
+    top: -10px;
+    opacity: 1;
+  }
+  &:hover .btn__visible {
+    transform: translateY(200%);
+  }
+  &:hover .btn__visible--project{
+    transform: translateY(100%);
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+  &:active {
+    transform: translateY(-10px);
+  }
+
+
+  &__contact {
+    padding: 1.5rem 2.5rem;
+    text-decoration-line: none;
+    transition: all .1s ease;
+    justify-self: center;
+    background-color: #ffb6b9;
+    color: white;
+
+    &:hover {
+      background-color: #ff8388;
+     font-weight: bolder;
+    }
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+    &:active {
+      transform: translateY(-10px);
+    }
+
+  }
+
+  &__explore {
+    padding: 1.5rem 2.5rem;
+    text-decoration-line: none;
+    transition: all .1s ease;
+    justify-self: flex-start;
+    background-color: #ffb6b9;
+    color: white;
+
+    &:hover {
+      background-color: #ff8388;
+      font-weight: bolder;
+    }
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+    &:active {
+      transform: translateY(-10px);
+    }
+
+  }
+
+  //UCLOVERY
+  &__uclovery {
+    padding: 1.5rem 2.5rem;
+    border: 1px solid white;
+    text-decoration-line: none;
+    color: $color-dark-gray-2;
+    background-color: $color-white;
+    transition: all .2s ease;
+
+    @media only screen and (max-width: 900px) {
+      padding: 1rem 1.5rem;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: .8rem 1rem;
+    }
+
+    &:hover {
+      background-image: linear-gradient(to right bottom, rgba(0, 197, 191, 0.85), rgba(98, 230, 98, 0.85));
+      border: 1px solid white;
+      color: white;
+      transform: scale(1.1);
+      font-weight: bolder;
+    }
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+    &:active {
+      transform: translateY(-10px);
+    }
+  }
+
+  //BIKES
+  &__bike {
+    padding: 1.5rem 2.5rem;
+    text-decoration-line: none;
+    transition: all .2s ease;
+    color: white;
+    border:  solid 1px white;
+    background-color: $color-bike-gray;
+
+    @media only screen and (max-width: 900px) {
+      padding: 1rem 1.5rem;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: .8rem 1rem;
+    }
+
+    &:hover {
+      border:  solid 1px $color-bike-yellow;
+      color:  $color-bike-yellow;
+      background-color: $color-bike-gray;
+      transform: scale(1.1);
+      font-weight: bolder;
+    }
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+    &:active {
+      transform: translateY(-10px);
+    }
+  }
+
+  //CHALLENGES
+  &__challenge {
+    padding: 1.5rem 2.5rem;
+    text-decoration-line: none;
+    transition: all .2s ease;
+    color: $color-white;
+    background-color: $color-challenges;
+
+    @media only screen and (max-width: 900px) {
+      padding: 1rem 1.5rem;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: .8rem 1rem;
+    }
+
+    &:hover {
+      background-image: linear-gradient(to right bottom, $color-challenges,
+              #904ddb, $color-challenges);
+      transform: scale(1.1);
+      font-weight: bolder;
+    }
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+    &:active {
+      transform: translateY(-10px);
+    }
+  }
+
+  //SWITCH
+  &__switch {
+    padding: 1.5rem 2.5rem;
+    text-decoration-line: none;
+    transition: all .2s ease;
+    color: $color-white;
+    background-color: $color-switch;
+
+    @media only screen and (max-width: 900px) {
+      padding: 1rem 1.5rem;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: .8rem 1rem;
+    }
+
+    &:hover {
+      background-image: linear-gradient(to right bottom, $color-switch,
+              darken($color-switch, 10%));
+      transform: scale(1.1);
+      font-weight: bolder;
+    }
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+    &:active {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+
+.btn__invisible--project {
+  opacity: 0;
+}
+
+
